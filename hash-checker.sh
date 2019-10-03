@@ -16,7 +16,7 @@ filehash=$(shasum -a 256 "$filepath")
 echo "$filehash"
 
 #check to see if the hash values match
-if [ "$filehash" = "$knownhash" ]; then
+if [ "$filehash" == "$knownhash" ]; then
 	echo "The integrity of this file is confirmed."
 else
 	echo "DANGER! The integrity of this file cannot be assured."
